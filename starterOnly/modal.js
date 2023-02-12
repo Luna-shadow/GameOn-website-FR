@@ -1,10 +1,10 @@
 var app = {
 
   // DOM Elements
-  modalbg : document.querySelector(".bground"),
-  modalBtn : document.querySelectorAll(".modal-btn"),
-  modalClose : document.querySelector(".close"),
-  formData : document.querySelectorAll(".formData"),
+  modalbg : document.querySelector(".bground"), // le fond du formulaire
+  modalBtn : document.querySelectorAll(".modal-btn"), /// bouton d'appel de la modal (s'inscrire)
+  modalClose : document.querySelector(".close"), //La croix qui ferme la modale
+  //formData : document.querySelectorAll(".formData"), // récupère tout les div avec label et input
   // Field Error object
   fieldError : {},
   // Input Values
