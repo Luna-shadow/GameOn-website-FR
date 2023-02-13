@@ -224,7 +224,7 @@ var app = {
     validationButton.innerText = "Fermer";
     document.querySelector(".content").append(validationButton);
     // listener
-    document.getElementById("validationButton").addEventListener("click", app.closeModal);
+    document.getElementById("validationButton").addEventListener("click", app.closeModal); 
   },
 
   // launch modal form
