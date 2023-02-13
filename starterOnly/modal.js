@@ -215,7 +215,7 @@ var app = {
     let validationMessage = document.createElement("p");
     validationMessage.setAttribute("id","validationMessage");
     validationMessage.className = "validationMessage";
-    validationMessage.innerText = "Merci pour votre inscription";
+    validationMessage.innerText = "Merci pour\n votre inscription";
     document.querySelector(".content").append(validationMessage);
     // button
     let validationButton = document.createElement("button");
