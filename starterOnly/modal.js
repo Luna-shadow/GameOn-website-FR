@@ -210,13 +210,21 @@ var app = {
 
   // Display validation message
   displayValidation : ()=>{
-    document.getElementById("myform").style.display = "none";
+    document.getElementById("myform").style.visibility = "hidden";
+    // message
     let validationMessage = document.createElement("p");
     validationMessage.setAttribute("id","validationMessage");
     validationMessage.className = "validationMessage";
-    validationMessage.innerText = "Vos données ont bien été envoyées";
-    app.birthdate.parentNode.append(validationMessage);
+    validationMessage.innerText = "Merci pour votre inscription";
     document.querySelector(".content").append(validationMessage);
+    // button
+    let validationButton = document.createElement("button");
+    validationButton.setAttribute("id","validationButton");
+    validationButton.className = "btn-validation";
+    validationButton.innerText = "Fermer";
+    document.querySelector(".content").append(validationButton);
+    // listener
+    document.getElementById("validationButton").addEventListener("click", app.closeModal);
   },
 
   // launch modal form
@@ -227,8 +235,10 @@ var app = {
 
   // close modal form
   closeModal : ()=>{
+    document.getElementById("myform").style.visibility = "initial";
     document.getElementById("myform").reset();
     if(document.getElementById("validationMessage")) document.getElementById("validationMessage").remove();
+    if(document.getElementById("validationButton")) document.getElementById("validationButton").remove();
     app.modalbg.style.display = "none";
   },
 
